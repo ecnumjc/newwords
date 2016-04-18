@@ -14,5 +14,6 @@ if __name__ == "__main__":
     p3_file_stopwords="stoplist.txt"
     p4_N="5"
     p5_thres="8,1,1,0.01,0.01,5"
-    cmd = 'java -jar n_gram.jar '+p1_filein+' '+p2_fileout+' '+p3_file_stopwords+' '+p4_N+' '+p5_thres
+
+    cmd = 'java -jar -Xms1024m -Xmx1336m N_gram.jar '+p1_filein+' '+p2_fileout+' '+p3_file_stopwords+' '+p4_N+' '+p5_thres
     os.system(cmd)

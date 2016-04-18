@@ -56,5 +56,5 @@ def Bootstrapping_nw(word2vec_model,seedwords_file,field_words_file,newwords_fil
 
 
 if __name__ == '__main__':
-    Bootstrapping_nw(".\\model\\securities.model",".\\seed\\seed_securities.txt",".\\field_newwords_first\\securities.txt",".\\field_newwords_final\\securities.txt",0.01)
+    Bootstrapping_nw("../DATA/model/business.model","../DATA/seeds_data/seed_business.txt","../DATA/ngram_data/business.txt","../DATA/nws_data/business/business.txt",0.01)
 

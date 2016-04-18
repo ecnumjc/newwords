@@ -38,16 +38,14 @@ def wordsseg(filedict_str,filefin_str,filefout_str):
     fout.close()
 
 
-def word2vec_trainmodel(file_fin):
-    cmd =  'python train_word2vec_model.py '+file_fin+' '+file_fin+'.model '+file_fin+'.vector'
+def word2vec_trainmodel(file_fin,file_fout):
+    cmd =  'python train_word2vec_model.py '+file_fin+' '+file_fout+'.model '+file_fout+'.vector'
     os.system(cmd)
 
 
 if __name__ == '__main__':
-    #example:
-    cleandata("../DATA/raw_data/test.txt","../DATA/clean_data/test.clean")
-    create_dict("../DATA/ngram_data/securities.txt","../DATA/userdict/userdict_securities.txt")
-    wordsseg("../DATA/userdict/userdict_securities.txt","../DATA/clean_data/securities.txt.clean","../DATA/seg_data/securities.txt.clean.seg")
-    word2vec_trainmodel("../DATA/seg_data/securities.txt.clean.seg")
-
-
+    # example:
+    cleandata("../DATA/raw_data/business.txt","../DATA/clean_data/business.txt.clean")
+    # create_dict("../DATA/ngram_data/business.txt","../DATA/userdict/userdict_business.txt")
+    # wordsseg("../DATA/userdict/userdict_business.txt","../DATA/clean_data/business.txt.clean","../DATA/seg_data/business.txt.clean.seg")
+    # word2vec_trainmodel("../DATA/seg_data/business.txt.clean.seg","../DATA/model/business")
