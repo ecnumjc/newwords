@@ -22,7 +22,7 @@ email:[mjcica@outlook.com](email:mjcica@outlook.com)
 ###**src**<br/>
 * pre_data.py：数据预处理，包括去除控制字符、分词、训练word2vec向量空间<br/>
 * ngram.py:ngram切分字符串,需要在main函数中设置一组参数，以及调用jar包jvm参数的设置。<br/>
-* fw_w2vb_model.py：基于word2vec的新词发现过滤模型<br/>
+* fw\_w2vb\_model.py：基于word2vec的新词发现过滤模型<br/>
 * kmeans_nw.py：聚类算法找中心，帮助找阈值<br/>
 * train_word2vec_model.py:word2vec训练脚本<br/>
 * N\_gram.jar是在ngram_nw.py中调用的jar包<br/>
@@ -32,6 +32,13 @@ email:[mjcica@outlook.com](email:mjcica@outlook.com)
 ###**doc**<br/>
 * 一份领域新词抽取实验报告
 * 一份专利申请初稿
+
+##源代码使用的建议
+* 首先应该使用pre_data.py做数据预处理，如去除控制字符等，需要查看其中main函数，根据需要调用相应函数；
+* ngram.py第一次过滤，初评价；
+* fw\_w2vb\_model.py第二次过滤，再评价；
+* 其他像分词、训练词向量空间等操作都在pre_data.py中，需要将需要的函数的注释拿掉，并且注释掉不用的函数；
+* 所有的.py程序的运行都要在源代码中修改待处理文本文件的路径，代码中给了例子；
 
 
 
